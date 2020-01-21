@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Chen Luo">
+  <meta name="dcterms.date" content="2020-01-21">
+  <title>Network Science behind the Matthew Effect</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="./css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="./css/theme/solarized.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? './css/print/pdf.css' : './css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="./lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="./imgs0121/background.jpg" data-background-opacity=0.3>
+  <h1 class="title" style="color: black; opacity: 0.65">Network Science behind the Matthew Effect</h1>
+  <p class="author" style="color: black; opacity: 0.65">Chen Luo</p>
+  <p class="date" style="color: black; opacity: 0.65">Jan. 21, 2020</p>
+</section>
+
+<section id="the-matthew-effect-in-science" class="slide level3" data-background-image="./imgs0121/theMatthewEffect.gif" data-background-opacity=0.1>
+<h3 style="color: black; opacity: 0.55; color: black; font-weight: bold;">The Matthew Effect in science</h3>
+<h4 id="the-reward-and-communication-systems-of-science-are-considered" style="color: black; opacity: 0.55">The reward and communication systems of science are considered</h4>
+<p style="color: black; opacity: 0.55">By Merton, R. K.</p>
+<p style="color: white; opacity: 0.55; font-size: 16px; background-color: dimgrey;">Merton, R. K. (1968). The Matthew Effect in science: The reward and communication systems of science are considered. <span style="font-style: italic;">Science, 159</span>(3810), 56-63.</p>
+</section>
+<section id="outline" class="slide level3">
+<h3>Outline</h3>
+<ul>
+<li>Reward system of science
+<ul>
+<li>“Once a Nobel laureate, always a Nobel laureate.”</li>
+<li>A stratified distribution of chances</li>
+<li>Unbalanced prestige and disproportionate credit</li>
+</ul></li>
+<li>How the Matthew Effect affects the comm system of science
+<ul>
+<li>Visibility difference between the well-known and less-known</li>
+<li>The focalizing function of eminent men</li>
+</ul></li>
+<li>Influences of the Matthew Effect on the macrosocial level</li>
+</ul>
+</section>
+<section id="mapping-to-network-science" class="slide level3">
+<h3>Mapping to network Science</h3>
+<ul>
+<li>Reward system of science <span class="fragment fade-up"> <span class="fragment highlight-blue">= Set / Change the network structure</span></span>
+<ul>
+<li>The prestige of the awards can be converted to the prestige of the laureates</li>
+</ul></li>
+<li>Comm system of science <span class="fragment fade-up"> <span class="fragment highlight-blue">= Information flow in the network</span></span>
+<ul>
+<span class="fragment fade-up"><li>Higher prestige</span> <p class="fragment fade-up" style="margin-bottom: 5px; margin-top: 5px">= Greater visibility</p> <p class="fragment fade-up" style="margin-bottom: 5px; margin-top: 5px">= More widely cited</p> <p class="fragment fade-up" style="margin-bottom: 5px; margin-top: 5px">= Stronger appeal</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="question-1" class="slide level3">
+<h3>Question 1</h3>
+<p style="background-color: bisque; color: slategrey;">Taking the scientific field as a network, what are the network characteristics of the laureates? (Characteristics include <span style="font-style: italic;">degree centrality</span>, <span style="font-style: italic;">closeness centrality</span>, <span style="font-style: italic;">betweenness centrality</span>, <span style="font-style: italic;">clique</span>, …)</p>
+</section>
+<section id="pros-cons-of-the-matthew-effect" class="slide level3">
+<h3>Pros &amp; Cons of the Matthew Effect</h3>
+<ul>
+<li>Pros
+<ul>
+<li>Collaboration with prominent scientists can be converted into an asset</li>
+<li>Charismatic roles are necessary for building norms and values</li>
+<li>The self-fulfilling prophecy</li>
+</ul></li>
+<li>Cons
+<ul>
+<li>The overconcentration tendency of academic resources</li>
+<li>Junior researchers are likely to be overshadowed by illustrious co-authors</li>
+<li>High quality works produced by less-known scientists may be obscured</li>
+</ul></li>
+</ul>
+</section>
+<section id="question-2" class="slide level3">
+<h3>Question 2</h3>
+<p style="background-color: bisque; color: slategrey;">Since the Matthew Effect in science causes some negative effects, are there any <span style="font-style: italic;">strategies</span> to avoid those problems?</p>
+</section>
+<section id="emergence-of-scaling-in-random-networks" class="slide level3" data-background-image="./imgs0121/lackOfInternalScale.jpg" data-background-opacity=0.1>
+<h3 style="color: black; opacity: 0.55; color: black; font-weight: bold;">Emergence of scaling in random networks</h3>
+<p style="color: black; opacity: 0.55; color: black;">By Barabási, A. L., &amp; Albert, R.</p>
+<p style="color: white; opacity: 0.55; font-size: 16px; background-color: dimgrey;">Barabási, A. L., & Albert, R. (1999). Emergence of scaling in random networks. <span style="font-style: italic;">Science, 286</span>(5439), 509-512.</p>
+</section>
+<section id="outline-1" class="slide level3">
+<h3>Outline</h3>
+<ul>
+<li>Disclose a common property of large networks
+<ul>
+<li>The vertex connectivities follow a scale-free power-law distribution</li>
+</ul></li>
+<li>Driving forces behind the distribution
+<ul>
+<li>The increasing number of nodes (growth of nodes)</li>
+<li>New vertices are more likely to attach to the well-connected vertices (preferential attachment)</li>
+</ul></li>
+<li>Result
+<ul>
+<li>Large networks self-organize into a scale-free state</li>
+</ul></li>
+</ul>
+</section>
+<section id="question-3" class="slide level3">
+<h3>Question 3</h3>
+<p style="background-color: bisque; color: slategrey;">What’s the meaning of <span style="font-style: italic;">scale</span>, <span style="font-style: italic;">scale-free</span>, <span style="font-style: italic;">scale-invariant</span>, <span style="font-style: italic;">self-organizing</span>? How to explain them with real-life examples?</p>
+</section>
+<section id="the-connectivity-rule-random-vs.preferential" class="slide level3">
+<h3>The connectivity rule: random vs. preferential</h3>
+<ul>
+<li>A <code>rich-get-richer</code> phenomenon can be easily detected in real networks</li>
+<li>Merton’s work provides evidence for this viewpoint</li>
+<li>Nodes prefer to link to the more connected nodes
+<ul>
+<li>In the real world, there are many nodes with few links but a significant minority of very highly connected nodes <a href="http://networksciencebook.com/chapter/5/#growth" target="_blank">See Barabási’s examples</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="question-4" class="slide level3">
+<h3>Question 4</h3>
+<p style="background-color: bisque; color: slategrey;">What are the differences between the <span style="font-style: italic;">small-world network</span> and the <span style="font-style: italic;">scale-free network</span>? Whether the scale-free network challenges the rationality of small-world network?</p>
+</section>
+<section id="scale-free-network-vs.random-network" class="slide level3">
+<h3>Scale-free network vs. Random network</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Scale-free network</th>
+<th style="text-align: left;">Random network</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Representative</td>
+<td style="text-align: left;">B-A Model</td>
+<td style="text-align: left;">ER Model, WS Model</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P(<span style="font-style: italic;">k</span>)</td>
+<td style="text-align: left;">Power-law distribution</td>
+<td style="text-align: left;">Poission distribution</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Num. of vertices</td>
+<td style="text-align: left;">Fixed</td>
+<td style="text-align: left;">Continuous addition of new vertices</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Connection rule</td>
+<td style="text-align: left;">Radom and uniform</td>
+<td style="text-align: left;">Preferential connectivity</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="scale-free-network-in-real-world" class="slide level3">
+<h3>Scale-free network in real-world</h3>
+<figure>
+<img data-src="/Users/lyndon/Downloads/reveal.js-3.8.0/imgs0121/rule_8020.png" alt="The 80/20 rule" /><figcaption>The 80/20 rule</figcaption>
+</figure>
+</section>
+<section id="thank-you." class="slide level3">
+<h3>Thank you.</h3>
+<p></p>
+<p></p>
+<!-- <p style="font-size: 15px">Made by <span style="font-style: italic;">MarkDown</span> & <span style="font-style: italic;"><a href="https://github.com/hakimel/reveal.js/">reveal.js</a></span></p> -->
+</section>
+    </div>
+  </div>
+
+  <script src="./lib/js/head.min.js"></script>
+  <script src="./js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: './plugin/zoom-js/zoom.js', async: true },
+          { src: './plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
